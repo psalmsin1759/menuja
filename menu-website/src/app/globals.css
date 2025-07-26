@@ -1,26 +1,42 @@
 @import "tailwindcss";
 
+@import url('https://fonts.googleapis.com/css2?family=Antonio&display=swap');
+
 :root {
   --background: #ffffff;
   --foreground: #171717;
+  --font-sans: "Antonio", sans-serif;
+  --primary: #AE271E;
+  --secondary: #F4A261;
+  --customblack: #232323;
+  --textBody: #7e7e7e;
+  --menubg: #F2F0ED;
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --color-primary: var(--primary);
+  --color-secondary: var(--secondary);
+   --color-menubg: var(--menubg);
+   --color-customblack: var(--customblack);
+  --font-sans: 'Antonio', sans-serif;
+  --color-textBody: var(--textBody);
 }
 
-@media (prefers-color-scheme: dark) {
+/* @media (prefers-color-scheme: dark) {
   :root {
     --background: #0a0a0a;
     --foreground: #ededed;
   }
-}
+} */
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: 'Antonio', sans-serif;
+}
+
+.customMargin {
+  @apply px-6 md:px-40
 }
