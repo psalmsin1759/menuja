@@ -7,6 +7,7 @@ import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { Provider } from "react-redux";
 import { store } from "@/store";
+import ClientLayout from "./ClientLayout";
 
 export const metadata: Metadata = {
   title: "Menuja",
@@ -27,18 +28,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={antonio.className}>
-        <div className="">
-          <Provider store={store}>
-            <Header />
-            {children}
-            <Footer />
-            <ToastContainer
-              position="top-center"
-              autoClose={2000}
-              aria-label={undefined}
-            />
-          </Provider>
-        </div>
+        <ClientLayout>{children}</ClientLayout>
       </body>
     </html>
   );
