@@ -46,9 +46,9 @@ export default function ProductCard({ product }: ProductProps) {
         <p className="tracking-wide text-textBody">{product.description}</p>
         <div className="flex gap-4 items-center">
           <div className="flex justify-between gap-2 px-4 py-0.5 rounded-3xl border border-primary">
-            <button onClick={handleDecreaseQuantity}>-</button>
+            <button onClick={handleDecreaseQuantity}><span className="text-lg">-</span></button>
             <button>{quantity}</button>
-            <button onClick={handleIncreaseQuantity}>+</button>
+            <button onClick={handleIncreaseQuantity}><span className="text-lg">+</span></button>
           </div>
           <div
             onClick={handleAddToCart}

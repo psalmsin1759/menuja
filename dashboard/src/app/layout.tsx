@@ -1,8 +1,7 @@
 import type { Metadata } from "next";
-import "./globals.css";
 import { Antonio } from "next/font/google";
-import "react-toastify/dist/ReactToastify.css";
-import ClientLayout from "./ClientLayout";
+import "./globals.css";
+
 
 export const metadata: Metadata = {
   title: "Menuja",
@@ -22,8 +21,8 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={antonio.className}>
-        <ClientLayout>{children}</ClientLayout>
+     <body className={antonio.className}>
+        {children}
       </body>
     </html>
   );
